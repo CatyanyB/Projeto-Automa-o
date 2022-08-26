@@ -3,18 +3,7 @@
 const faker = require("faker-br");
 
 describe('Funcionalidade: Cadastro', () => {
-/*  (Hook)
-Antes de tudo
-Before
-
-Antes de cada cenário
-BeforeEach
-
-Depois de tudo
-After
-
-Depois de cada cenário
-AfterEach */
+    
 before(() => {
     cy.visit('cadastrar')
 });
