@@ -3,13 +3,11 @@
 const faker = require("faker-br");
 
 describe('Funcionalidade: Cadastro', () => {
-    
-before(() => {
+
+beforeEach(() => {
     cy.visit('cadastrar')
-});
-    it('Deve fazer cadastro com sucesso', () => {
-        cy.cadastro('Catyany', faker.internet.email(), 'QA1213', 'QA1213')
-        cy.get('[data-test="dashboard-welcome"]').should('contain', 'Bem-vindo')
+    cy.cadastro('Catyany', faker.internet.email(), 'QA1213', 'QA1213')
+    cy.get('[data-test="dashboard-welcome"]').should('contain', 'Bem-vindo')
     });
 
     it('Deve acessar tela de criar perfil', () => {
